@@ -108,15 +108,12 @@ public class UserJsonTest {
 
     @Test
     public void shouldExtractAndUseJavaToValidate() {
-        Object response = given()
+        ArrayList<String> names = given()
                 .when()
                 .get("https://restapi.wcaquino.me/users")
                 .then()
                 .statusCode(200)
                 .extract().path("name.findAll{it.startsWith('Maria')}");
-
-        @SuppressWarnings("unchecked")
-        ArrayList<String> names = new ArrayList<>((ArrayList<String>) response);
 
         Assert.assertEquals(1, names.size());
         Assert.assertTrue(names.get(0).equalsIgnoreCase("mArIa Joaquina"));
