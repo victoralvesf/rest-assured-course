@@ -34,7 +34,7 @@ public class JwtAuthTest {
 
     @Test
     public void shouldAuthenticateWithJwtToken() {
-        Map<String, String> login = new HashMap<String, String>();
+        Map<String, String> login = new HashMap<>();
         login.put("email", USER_EMAIL);
         login.put("senha", USER_PASSWORD);
 

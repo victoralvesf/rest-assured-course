@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.*;
 
 public class PublicApiTest {
     @BeforeClass
-    public static void beforeClass() throws Exception {
+    public static void beforeClass() {
         RestAssured.baseURI = "https://swapi.dev/api/";
 
         RequestSpecBuilder reqBuilder = new RequestSpecBuilder();
